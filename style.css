@@ -1,0 +1,208 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #0000004D;
+
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5); /* Optional dark overlay */
+}
+
+.logo {
+    position: absolute;
+    top: 255px;
+    left: 160px;
+    width: 243.35px;
+    height: 43.26px;
+}
+
+.text-center {
+    text-align: center;
+    margin: 0 20px;
+    color: #FFD15B;
+    width: 890px;
+    font-family: Anton; /* Need to add this font */
+    font-size: 44px;
+    font-weight: 400;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.search-bar input[type="text"] {
+    width: 954px;
+    height: 72px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 11px;
+    box-sizing: border-box;
+}
+
+.search-bar i {
+    position: absolute;
+    right: 279px;
+    top: 57%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: white;
+    transition: all 300ms ease-out;
+    background: black;
+    border-radius: 10px;
+    opacity: 1;
+    width: 51px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar i:hover {
+    background: #FFD15B;
+    color: white;
+}
+/* .search-bar input[type="submit"] {
+    width: 100px; 
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+} */
+
+.filter {
+    display: flex;
+    justify-content: space-around;
+    background-color: lightgray;
+    padding: 10px;
+    z-index: 3; /* Ensure filter section is above the image */
+    position: relative;
+    top: -20px; /* Slight overlap */
+}
+
+
+
+.dropdown-search {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+}
+
+/*============== Recipe Card Styles ===============*/
+.card {
+    width: 380px;
+    height: 731px;
+    margin: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    height: 253px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    
+}
+
+.truncate-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-timer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: yellow;
+    position: absolute;
+    top: 1%;
+    left: 75%;
+    padding: 5px 15px;
+    border-radius: 14px;
+}
+
+.card-timer a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.card-ingredients .ingredient-name,
+.card-ingredients .ingredient-quantity {
+    display: block;
+}
+
+.col-6{
+    margin-bottom: 30px;
+}
+
+.card-ingredients .row {
+    margin-bottom: 10px;
+    gap: 10px
+}
